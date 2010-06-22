@@ -12,7 +12,6 @@ def index(request):
     c = Context ({
                   'latest_poll_list': latest_poll_list,
                   })
-    # output = ', '.join([p.question for p in latest_poll_list])
     return HttpResponse (t.render(c))
 
 def detail(request, poll_id):
